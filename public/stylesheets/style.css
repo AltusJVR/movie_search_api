@@ -61,7 +61,7 @@ list-style: none;
 
 .hero {
   background: url(https://source.unsplash.com/1600x900/weekly/?pattern,dark) no-repeat center center/cover;
-  height: 90vh;
+  height: 80vh;
   position: relative;
   color: #f3f3f3;
 }
@@ -88,7 +88,7 @@ padding: 0 20px;
 
 #search {
   background: url(https://source.unsplash.com/1600x900/weekly/?pattern,dark) no-repeat center center/cover;
-  height: 90vh;
+  height: 80vh;
   position: relative;
   color: #aaaaaa;
   display: flex;
@@ -124,7 +124,8 @@ padding: 0 20px;
   flex: 1;
   justify-content: center;
   align-items: center;
-  background-color: #cecece;
+  background-color: #333;
+  color: #a1a1a1;
 }
 
 #general-search .search-result {
@@ -137,12 +138,12 @@ padding: 0 20px;
 
 #general-search .search-result h1 {
   font-weight: 500;
-  color: #333;
+ 
 }
 
 #general-search.search-result h2{
   font-weight: 500;
-  color: #333;
+  
 }
 
 #general-search img {
@@ -157,26 +158,45 @@ padding: 0 20px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #cecece;
+  background-color: #333;
+  color: #a1a1a1;
 }
 
 #specific-search .search-result h1  {
   font-weight: 500;
-  color: #333;
+  
 }
 
 #specific-search h3{
 font-weight: 500;
-color: #333;
+
 }
 
 #specific-search .search-result p {
   font-size: 20px;
-  color: #333;
+  
 }
 
 #specific-search .search-result img {
   width: 300px;
   height: 300px;
   border-radius: 10px;
+}
+
+#footer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 10vh;
+}
+
+#footer a:hover {
+  color: #156fed;
+}
+
+#footer span {
+  margin: 0 10px;
+  border-bottom: 1px solid #156fed;
 }
