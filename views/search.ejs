@@ -1,28 +1,45 @@
-<%- include('partials/header') %>
-<section id="search">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="stylesheet" href="../stylesheets/utilities.css">
+  <title>Search || Search the OMDB Movie API</title>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+  <section id="search">
 
 
-  <form action="/search/result" method="POST">
-    <h2>General Search</h2>
-    <input type="text" name="movie" required>
-    <select name="type" id="search-type">
-      <option value="movie">Movie</option>
-      <option value="series">Series</option>
+    <form action="/search/result" method="POST">
+      <h2>General Search</h2>
+      <input type="text" name="movie" required>
+      <select name="type" id="search-type">
+        <option value="movie">Movie</option>
+        <option value="series">Series</option>
 
-    </select>
-    <button type="submit" class="btn-primary">Search</button>
-  </form>
+      </select>
+      <button type="submit" class="btn-primary">Search</button>
+    </form>
 
 
-  <form action="/search/title" method="POST">
-    <h2>Search for a specific Title</h2>
-    <input type="text" name="title">
+    <form action="/search/title" method="POST">
+      <h2>Search for a specific Title</h2>
+      <input type="text" name="title">
 
-    <button type="submit" class="btn-primary">Search</button>
-  </form>
+      <button type="submit" class="btn-primary">Search</button>
+    </form>
 
-  <a href="/" class="btn-primary">Go Back</a>
+    <a href="/" class="btn-primary">Go Back</a>
 
-</section>
+  </section>
 
-<%- include('partials/footer') %>
+  <%- include('partials/footer') %>
+</body>
+
+</html>

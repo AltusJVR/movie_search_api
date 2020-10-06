@@ -1,16 +1,32 @@
-<%- include('partials/header') %>
-<section id="specific-search">
-  <div class="search-result">
-    <h1><%= tResult.Title %></h1>
-    <h3><%= tResult.Year %> </h3>
-    <h3><%= tResult.Genre %> </h3>
-    <h2>Ratings:</h2>
-    <% tResult.Ratings.forEach(function(Ratings){%>
-    <p>Source: <%= Ratings.Source %> - Rating: <%= Ratings.Value %> </p>
-    <% }) %>
-    <img src="<%= tResult.Poster %> " alt="Film Poster">
-  </div>
-  <a href="/search" class="btn-primary">Go back</a>
-</section>
+<!DOCTYPE html>
+<html lang="en">
 
-<%- include('partials/footer') %>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="stylesheet" href="../stylesheets/utilities.css">
+  <title>Specific Title Results</title>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+  <section id="specific-search">
+    <div class="search-result">
+      <h1><%= tResult.Title %></h1>
+      <h3><%= tResult.Year %> </h3>
+      <h3><%= tResult.Genre %> </h3>
+      <h2>Ratings:</h2>
+      <% tResult.Ratings.forEach(function(Ratings){%>
+      <p>Source: <%= Ratings.Source %> - Rating: <%= Ratings.Value %> </p>
+      <% }) %>
+      <img src="<%= tResult.Poster %> " alt="Film Poster">
+    </div>
+    <a href="/search" class="btn-primary">Go back</a>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+
+</html>
