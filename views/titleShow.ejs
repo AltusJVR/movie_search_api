@@ -1,8 +1,16 @@
-<h1><%= tResult.Title %></h1>
-<h3><%= tResult.Year %> </h3>
-<h3><%= tResult.Genre %> </h3>
-<h2>Ratings:</h2>
-<% tResult.Ratings.forEach(function(Ratings){%>
-<h3>Source: <%= Ratings.Source %> - Rating: <%= Ratings.Value %> </h3>
-<% }) %>
-<img src="<%= tResult.Poster %> " alt="Film Poster">
+<%- include('partials/header') %>
+<section id="specific-search">
+  <div class="search-result">
+    <h1><%= tResult.Title %></h1>
+    <h3><%= tResult.Year %> </h3>
+    <h3><%= tResult.Genre %> </h3>
+    <h2>Ratings:</h2>
+    <% tResult.Ratings.forEach(function(Ratings){%>
+    <p>Source: <%= Ratings.Source %> - Rating: <%= Ratings.Value %> </p>
+    <% }) %>
+    <img src="<%= tResult.Poster %> " alt="Film Poster">
+  </div>
+  <a href="/search" class="btn-primary">Go back</a>
+</section>
+
+<%- include('partials/footer') %>

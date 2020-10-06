@@ -1,6 +1,13 @@
-<%result.forEach(function(Search){%>
-<h1><%= Search.Title %> </h1>
-<h6><%= Search.Year %> </h6>
-<img src="<%= Search.Poster %> " alt="Film Poster">
+<%- include('partials/header') %>
+<section id="general-search">
+  <%result.forEach(function(Search){%>
+  <div class="search-result">
+    <h1>Title: <%= Search.Title %> </h1>
+    <h3>Type: <%= Search.Type %> </h3>
+    <img src="<%= Search.Poster %> " alt="Film Poster">
+  </div>
+  <%})%>
+  <a href="/search" class="btn-primary">Go back</a>
+</section>
 
-<a href="/search">Go back</a>
+<%- include('partials/footer') %>

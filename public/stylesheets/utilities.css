@@ -1,0 +1,25 @@
+.btn-primary {
+  background-color: #f4f4f4;
+  color: #333;
+  display: inline;
+  cursor: pointer;
+  margin: 20px 20px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.container {
+display: flex;
+flex: 1;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom: 100px;
+}

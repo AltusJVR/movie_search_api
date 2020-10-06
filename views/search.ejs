@@ -1,23 +1,28 @@
-<h2>General Search</h2>
-<form action="/search/result" method="POST">
-  <input type="text" name="movie" required>
-  <select name="type" id="search-type">
-    <option value="movie">Movie</option>
-    <option value="series">Series</option>
-    <option value="episode">Episode</option>
-  </select>
-  <input type="submit" value="Search">
-</form>
+<%- include('partials/header') %>
+<section id="search">
 
-<h2>Search for a specific Title</h2>
-<form action="/search/title" method="POST">
-  <input type="text" name="title">
-  <select name="type" id="title-search">
-    <option value="movie">Movie</option>
-    <option value="series">Series</option>
-    <option value="episode">Episode</option>
-  </select>
-  <input type="submit" value="Search">
-</form>
 
-<a href="/">Go Back</a>
+  <form action="/search/result" method="POST">
+    <h2>General Search</h2>
+    <input type="text" name="movie" required>
+    <select name="type" id="search-type">
+      <option value="movie">Movie</option>
+      <option value="series">Series</option>
+      <option value="episode">Episode</option>
+    </select>
+    <button type="submit" class="btn-primary">Search</button>
+  </form>
+
+
+  <form action="/search/title" method="POST">
+    <h2>Search for a specific Title</h2>
+    <input type="text" name="title">
+
+    <button type="submit" class="btn-primary">Search</button>
+  </form>
+
+  <a href="/" class="btn-primary">Go Back</a>
+
+</section>
+
+<%- include('partials/footer') %>

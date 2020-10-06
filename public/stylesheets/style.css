@@ -11,6 +11,11 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #333;
+}
+
 
 #navbar {
   display: flex;
@@ -79,4 +84,99 @@ padding: 0 20px;
   font-size: 20px;
   max-width: 600px;
   margin: 20px 0 30px;
+}
+
+#search {
+  background: url(https://source.unsplash.com/1600x900/weekly/?pattern,dark) no-repeat center center/cover;
+  height: 90vh;
+  position: relative;
+  color: #aaaaaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#search h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+#search form {
+  margin: 10px 0;
+}
+
+#search form input {
+  padding:5px 0;
+  border-radius: 5px;
+}
+
+#search form select{
+  padding:5px 0 ;
+  border-radius: 5px;
+}
+
+#general-search {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: #cecece;
+}
+
+#general-search .search-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#general-search .search-result h1 {
+  font-weight: 500;
+  color: #333;
+}
+
+#general-search.search-result h2{
+  font-weight: 500;
+  color: #333;
+}
+
+#general-search img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+#specific-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #cecece;
+}
+
+#specific-search .search-result h1  {
+  font-weight: 500;
+  color: #333;
+}
+
+#specific-search h3{
+font-weight: 500;
+color: #333;
+}
+
+#specific-search .search-result p {
+  font-size: 20px;
+  color: #333;
+}
+
+#specific-search .search-result img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
 }
