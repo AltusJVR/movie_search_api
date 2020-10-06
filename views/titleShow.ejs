@@ -1,0 +1,8 @@
+<h1><%= tResult.Title %></h1>
+<h3><%= tResult.Year %> </h3>
+<h3><%= tResult.Genre %> </h3>
+<h2>Ratings:</h2>
+<% tResult.Ratings.forEach(function(Ratings){%>
+<h3>Source: <%= Ratings.Source %> - Rating: <%= Ratings.Value %> </h3>
+<% }) %>
+<img src="<%= tResult.Poster %> " alt="Film Poster">

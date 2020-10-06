@@ -1,0 +1,21 @@
+<h2>General Search</h2>
+<form action="/search/result" method="POST">
+  <input type="text" name="movie" required>
+  <select name="type" id="search-type">
+    <option value="movie">Movie</option>
+    <option value="series">Series</option>
+    <option value="episode">Episode</option>
+  </select>
+  <input type="submit" value="Search">
+</form>
+
+<h2>Search for a specific Title</h2>
+<form action="/search/title" method="POST">
+  <input type="text" name="title">
+  <select name="type" id="title-search">
+    <option value="movie">Movie</option>
+    <option value="series">Series</option>
+    <option value="episode">Episode</option>
+  </select>
+  <input type="submit" value="Search">
+</form>
