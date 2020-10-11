@@ -19,13 +19,18 @@
 
 <%- include('partials/header') %>
 <section id="general-search">
+  <%if(response.Response == 'False'){%>
+  <h1><%= response.Error %> </h1>
+  <%} else { %>
   <%result.forEach(function(Search){%>
   <div class="search-result">
     <h1>Title: <%= Search.Title %> </h1>
     <h3>Type: <%= Search.Type %> </h3>
     <img src="<%= Search.Poster %> " alt="Film Poster">
   </div>
-  <%})%>
+  <%});%>
+  <%};%>
+
   <a href="/search" class="btn-primary">Go back</a>
 </section>
 

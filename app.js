@@ -19,8 +19,6 @@ app.get('/search', function (req, res) {
   res.render('search')
 });
 
-
-
 app.post('/search/result', function (req, res) {
   const APIKEY = process.env.APIKEY;
   const movie = req.body.movie;
@@ -28,8 +26,9 @@ app.post('/search/result', function (req, res) {
   request('https://www.omdbapi.com/?s=' + movie + '&type=' + type + '&page=1&apikey=' + APIKEY, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var result = (JSON.parse(body)['Search']);
-      // console.log(result);
-      res.render('show', { result: result });
+      var response = (JSON.parse(body));
+      // console.log(response);
+      res.render('show', { result: result, response: response });
     }
   })
 });
@@ -40,8 +39,9 @@ app.post('/search/title', function (req, res) {
   request('https://www.omdbapi.com/?t=' + title + '&page=1&apikey=' + APIKEY, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var tResult = (JSON.parse(body));
+      var tResponse = (JSON.parse(body));
       // console.log(result);
-      res.render('titleShow', { tResult: tResult });
+      res.render('titleShow', { tResult: tResult, tResponse: tResponse });
     }
   })
 });
@@ -49,8 +49,6 @@ app.post('/search/title', function (req, res) {
 app.get('*', function (req, res) {
   res.redirect('/')
 })
-
-
 
 // ======== Listen on port =======
 const port = process.env.PORT || 8080;
