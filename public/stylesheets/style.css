@@ -60,7 +60,7 @@ list-style: none;
 /* Landing Content */
 
 .hero {
-  background: url(https://source.unsplash.com/1600x900/weekly/?pattern,dark) no-repeat center center/cover;
+  background: url(https://images.unsplash.com/photo-1448067686092-1f4f2070baae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) no-repeat center center/cover;
   height: 80vh;
   position: relative;
   color: #f3f3f3;
